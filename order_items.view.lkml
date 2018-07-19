@@ -38,6 +38,11 @@ view: order_items {
     sql: ${TABLE}.sale_price ;;
   }
 
+  measure: min_sale_price {
+    type: min
+    sql: ${sale_price} ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [id, inventory_items.id, orders.id]

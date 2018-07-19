@@ -12,6 +12,11 @@ view: inventory_items {
     sql: ${TABLE}.cost ;;
   }
 
+  measure: min_cost {
+    type: min
+    sql: ${cost} ;;
+  }
+
   dimension_group: created {
     type: time
     timeframes: [
